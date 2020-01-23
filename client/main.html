@@ -6,16 +6,28 @@
   <h1>Welcome to Meteor!</h1>
 
   {{> hello}}
+  {{> hi}}
   {{> info}}
 </body>
 
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
+
+
+
 </template>
+
+<template name="hi">
+  <button>mouseover</button>
+  <p>You've mouseover to {{counter2}} times.</p>
+  <img src="pokemon.jpg" alt="">
+</template>
+
 
 <template name="info">
   <h2>Learn Meteor!</h2>
+  <h1>Mario </h1>
   <ul>
     <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
     <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>

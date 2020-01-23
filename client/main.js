@@ -8,10 +8,20 @@ Template.hello.onCreated(function helloOnCreated() {
   this.counter = new ReactiveVar(0);
 });
 
+Template.hi.onCreated(function mouseoverOnCreated(){
+  this.counter2 = new ReactiveVar(0);
+});
+
 Template.hello.helpers({
   counter() {
     return Template.instance().counter.get();
   },
+});
+
+Template.hi.helpers({
+	counter2(){
+	 return Template.instance().counter2.get();
+	},
 });
 
 Template.hello.events({
@@ -20,3 +30,13 @@ Template.hello.events({
     instance.counter.set(instance.counter.get() + 1);
   },
 });
+
+Template.hi.events({
+'mouseover'(event, instance) {
+    // increment the counter when button is clicked
+    instance.counter2.set(instance.counter2.get() + 3);
+  },
+}); 
+
+
+  
